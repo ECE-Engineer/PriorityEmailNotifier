@@ -23,9 +23,9 @@ public class ReadingEmail {
     
     static ArrayList <String> list = new ArrayList <String>();
     static Scanner kb = new Scanner(System.in);
-    static String[] components;
+    //static String[] components;
     static String priority;
-    static ArrayList <String[]> userInfo = new ArrayList <String[]>();
+    //static ArrayList <String[]> userInfo = new ArrayList <String[]>();
 //    
 //    String d_email = "fromAddress@gmail.com",
 //            d_password = "password", //your email password
@@ -51,17 +51,17 @@ public class ReadingEmail {
                 System.out.println("The current order is from very important ---> not important");
                 priority = kb.next();
                 list.set(trace, elements.concat("---" + priority)); //overwrite the current message
-                components = new String[] {getName(s1), s2, s3, priority};
+                //components = new String[] {getName(s1), s2, s3, priority};
             }
             else{
-                components = new String[] {getName(s1), s2, s3};
+                //components = new String[] {getName(s1), s2, s3};
             }
             trace++;
-            userInfo.add(components); //add the components of each message to an indexer of messages
+            //userInfo.add(components); //add the components of each message to an indexer of messages
         }
-        for(String elements : list){ //lists old emails to new emails
-            System.out.println(elements); //DEBUG: updated list
-        }
+//        for(String elements : list){ //lists old emails to new emails
+//            System.out.println(elements); //DEBUG: updated list
+//        }
     }
     
     public static String getName(String s){ //get name formatted
