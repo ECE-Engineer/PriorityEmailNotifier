@@ -23,8 +23,9 @@ public class ReadingEmail {
     
     static ArrayList <String> list = new ArrayList <String>();
     static Scanner kb = new Scanner(System.in);
-    static String priority;
     static String[] components;
+    static String priority;
+    static ArrayList <String[]> userInfo = new ArrayList <String[]>();
 //    
 //    String d_email = "fromAddress@gmail.com",
 //            d_password = "password", //your email password
@@ -38,10 +39,10 @@ public class ReadingEmail {
         setMessageList();
         int trace = 0;
         for(String elements : list){ //lists old emails to new emails
-            String[] components = elements.split("---");
-            String s1 = components[0];
-            String s2 = components[1];
-            String s3 = components[2];
+            String[] parts = elements.split("---");
+            String s1 = parts[0];
+            String s2 = parts[1];
+            String s3 = parts[2];
             //System.out.println(elements); //DEBUG
             System.out.println("Do you want to set a priority for this person?\t" + getName(s1) + "\tY/N"); //DEBUG: question the user for the priority of an email if any
             String line = kb.next();
@@ -50,15 +51,20 @@ public class ReadingEmail {
                 System.out.println("The current order is from very important ---> not important");
                 priority = kb.next();
                 list.set(trace, elements.concat("---" + priority)); //overwrite the current message
+                components = new String[] {getName(s1), s2, s3, priority};
+            }
+            else{
+                components = new String[] {getName(s1), s2, s3};
             }
             trace++;
+            userInfo.add(components); //add the components of each message to an indexer of messages
         }
         for(String elements : list){ //lists old emails to new emails
             System.out.println(elements); //DEBUG: updated list
         }
     }
     
-    public static String getName(String s){
+    public static String getName(String s){ //get name formatted
         //System.out.println(s); //DEBUG
         String name = "";
         String[] fullName;
@@ -73,7 +79,13 @@ public class ReadingEmail {
         }
     }
     
+    public static String getDate(String s){
+        return s;
+    }
     
+    public static String getHeader(String s){
+        return s;
+    }
     
     public static void setMessageList(){
         Properties props = new Properties();
