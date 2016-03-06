@@ -22,6 +22,9 @@ import javax.mail.search.FlagTerm;
 public class ReadingEmail {
     
     static ArrayList <String> list = new ArrayList <String>();
+    static Scanner kb = new Scanner(System.in);
+    static String priority;
+    static String[] components;
 //    
 //    String d_email = "fromAddress@gmail.com",
 //            d_password = "password", //your email password
@@ -33,10 +36,45 @@ public class ReadingEmail {
     
     public static void main(String[] args) {
         setMessageList();
-        for(String elements : list){
-            System.out.println(elements);
+        int trace = 0;
+        for(String elements : list){ //lists old emails to new emails
+            String[] components = elements.split("---");
+            String s1 = components[0];
+            String s2 = components[1];
+            String s3 = components[2];
+            //System.out.println(elements); //DEBUG
+            System.out.println("Do you want to set a priority for this person?\t" + getName(s1) + "\tY/N"); //DEBUG: question the user for the priority of an email if any
+            String line = kb.next();
+            if(line.equalsIgnoreCase("Y")){ //set the priority
+                System.out.println("Select the priority" + " red " + " yellow " + " green ");
+                System.out.println("The current order is from very important ---> not important");
+                priority = kb.next();
+                list.set(trace, elements.concat("---" + priority)); //overwrite the current message
+            }
+            trace++;
+        }
+        for(String elements : list){ //lists old emails to new emails
+            System.out.println(elements); //DEBUG: updated list
         }
     }
+    
+    public static String getName(String s){
+        //System.out.println(s); //DEBUG
+        String name = "";
+        String[] fullName;
+        if(s.contains("\"")){
+            name = s.split("\"", 3)[1];
+            fullName = name.split(", ");
+            return fullName[1].trim() + " " + fullName[0].trim();
+        }
+        else{
+            fullName = s.split(" ");
+            return fullName[0].trim() + " " + fullName[1].trim();
+        }
+    }
+    
+    
+    
     public static void setMessageList(){
         Properties props = new Properties();
         props.setProperty("mail.store.protocol", "imaps");  //set the protocol for analyzing emails
@@ -72,6 +110,7 @@ public class ReadingEmail {
             mex.printStackTrace();
         }
     }
+    
 //    
 //    public ReadingEmail() {
 //        Properties props = new Properties();
