@@ -1,0 +1,57 @@
+[33mcommit 930f90b627725cf1969503339b41c3c09c4b9598[m
+Merge: 50ce249 49b95af
+Author: Kyle <kzeller@oswego.edu>
+Date:   Sat Mar 5 22:05:01 2016 -0500
+
+    Merge branch 'master' of https://github.com/ECE-Engineer/PriorityEmailNotifier
+
+[33mcommit 50ce2495764dc64739a0f45021807f1e093f0c94[m
+Author: Kyle <kzeller@oswego.edu>
+Date:   Sat Mar 5 21:59:10 2016 -0500
+
+    First Commit
+
+[33mcommit 49b95afc54a3ed892b2ed0b801d0d03e47830067[m
+Merge: e884e57 a05f38a
+Author: AakankshaRaika <aakanksh@buffalo.edu>
+Date:   Sat Mar 5 20:26:02 2016 -0500
+
+    Merge branches 'master' and 'master' of https://github.com/ECE-Engineer/PriorityEmailNotifier
+    
+    # Please enter a commit message to explain why this merge is necessary,
+    # especially if it merges an updated upstream into a topic branch.
+    #
+    # Lines starting with '#' will be ignored, and an empty message aborts
+    # the commit.
+
+[33mcommit e884e571ed93abc7ea079eef77be090c40c31d4e[m
+Author: AakankshaRaika <aakanksh@buffalo.edu>
+Date:   Sat Mar 5 20:06:15 2016 -0500
+
+    Added .project
+
+[33mcommit c2f8eca5d32cbcff3b40037dda650849538b6311[m
+Author: AakankshaRaika <aakanksh@buffalo.edu>
+Date:   Sat Mar 5 19:58:45 2016 -0500
+
+    Added .project
+
+[33mcommit a05f38ac7e95c40e161df5d9dfbb139079471bc2[m
+Author: Jared Brower <jbrower@oswego.edu>
+Date:   Sat Mar 5 19:50:29 2016 -0500
+
+    added folder
+
+[33mcommit 0874350ea136498889256b770e553693836311d4[m
+Author: (CK) <kzeller@oswego.edu>
+Date:   Sat Mar 5 16:30:44 2016 -0500
+
+    LICENSE
+    
+    The MIT License (MIT)
+
+[33mcommit 8b130475138a839423a54067a0da307be367ea5a[m
+Author: (CK) <kzeller@oswego.edu>
+Date:   Sat Mar 5 15:01:40 2016 -0500
+
+    Initial commit
