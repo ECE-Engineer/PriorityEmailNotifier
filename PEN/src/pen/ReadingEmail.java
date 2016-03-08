@@ -9,7 +9,9 @@ package pen;
 
 /**
  * MIT LICENSE
- * @author Kyle Z
+ * @author Kyle Z 
+ * @author Thomas Nunno
+ * @author Aakanksha Raika
  */
 
 
